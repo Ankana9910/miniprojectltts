@@ -38,7 +38,7 @@ But the place where we get stuck is the conversion part. All sorts of conversion
 **CURRENT SCENARIO**
 ****
 Nowadays there are two sorts of calculators that we use, one is the normal calculator and other is the scientific calculator. 
-![IMAGE1](https://www.google.com/url?sa=i&url=https%3A%2F%2Fpetapixel.com%2F2017%2F11%2F09%2Fdifference-levels-curves-photoshop%2F%3Fmc_cid%3Dae57434776%26mc_eid%3D41f1de74f0&psig=AOvVaw0tOE5NtPdOBlDnkJggRt9J&ust=1618304667646000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOCc-c-t-O8CFQAAAAAdAAAAABAD)
+
 
 >The scientific calculator does give an option pf digital bit conversion but that's way to time-consuming. 
 Here in this calculator the basic is to acecpt user input to get to know what is actually going ot be done.
@@ -61,7 +61,7 @@ Prerequisites and Assumptions:
 
 
 # SWOT ANALYSIS
-![](images/Untitled Workspace.jpg)
+![](https://github.com/Ankana9910/miniprojectltts/tree/main/images)
 
 
 # 4W'S AND 1'H
