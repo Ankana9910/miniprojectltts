@@ -62,7 +62,7 @@ Prerequisites and Assumptions:
 
 # SWOT ANALYSIS
 
-![image](https://github.com/Ankana9910/miniprojectltts/blob/2a9f27073ac4010137d2e75e793a1cce020dd53a/images/Untitled%20Workspace.jpg)
+![image](https://github.com/Ankana9910/miniprojectltts/blob/f838eddc23ae5f24af8eecdad59469d5c64bd299/2_Design/Untitled%20Workspace.jpg)
 
 # 4W'S AND 1'H
 **WHAT**
