@@ -9,18 +9,12 @@
 
 struct calculator{                                //STRUCTURE FOR CALCULATOR
 	int x1,x2;
-	int sum;
-	int product;
-	int subtract;
-	int divide;
 	int answer;
 	int ch1;
 };
 struct converter{                                 //STRUCTURE FOR CONVERTER
 	int ch2;
 	int cm;
-	float inch;
-	float feet;
 	float answer2;
 	float answer1;
 	long int bytes;
