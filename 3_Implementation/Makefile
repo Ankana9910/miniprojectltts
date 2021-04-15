@@ -45,9 +45,9 @@ WDELOBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)\\%.o)
 ####################### Targets beginning here #########################
 ########################################################################
 
-all: $(CALCONV)
+all: $(CALCONV) $(BUILD)
 
-# Builds the app
+# Tere is waale me kuch error h output ni create hori build k liye
 $(CALCONV): $(OBJ)
 	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
@@ -83,3 +83,6 @@ cleanw:
 .PHONY: cleandepw
 cleandepw:
 	$(DEL) $(DEP)
+
+$(BUILD):
+	mkdir build
