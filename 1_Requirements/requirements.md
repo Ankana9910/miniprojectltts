@@ -3,7 +3,7 @@
 ## INTRODUCTION
 ****
 There's this simple calculator which we all have in our mobile phones or the one we get in the stationery shops.
-Since years it has been doing the same job of arithmetically operating upon numbers and giving out the sum, product etc. But for us engineers; instead of taking a pen-paper to convert decimal to binary, octal, hexadecimal, it becomes a tedious task. 
+Since years it has been doing the same job of arithmetically operating upon numbers and giving out the sum, product etc. But for us engineers; instead of taking a pen-paper to convert bits to bytes, centimeters to feets or calculating voltage or power through devices. 
 To simplify this **CALCONV** has been introduced. 
 
 
@@ -32,7 +32,7 @@ But the place where we get stuck is the conversion part. All sorts of conversion
  1. The idea of building a machine that could carry out arithmetic operations, came out in 1642, when Blaise Pascal invented the Arithmetic Machine.
 2. The calculator featured a 12-digit display in red LED and cost $395 when it first went on sale in January 1971.
 3. The first solid-state electronic calculator came out in the 1960s ; this is what we use today with certain advancements.
-
+                ![](https://github.com/Ankana9910/miniprojectltts/blob/274aa1c76f621e3c0602b0939c8cb33f8b01dde3/2_Design/calculator.jpg)
 
 
 **CURRENT SCENARIO**
@@ -40,8 +40,9 @@ But the place where we get stuck is the conversion part. All sorts of conversion
 Nowadays there are two sorts of calculators that we use, one is the normal calculator and other is the scientific calculator. 
 
 
->The scientific calculator does give an option pf digital bit conversion but that's way to time-consuming. 
-Here in this calculator the basic is to acecpt user input to get to know what is actually going ot be done.
+ 
+> None of the Calcuators provides such conversion options.
+> Here in this calculator the basic is to acecpt user input to get to know what is actually going ot be done.
 
 # **DEFINING OUR SYSTEM**
 ****
@@ -64,27 +65,51 @@ Prerequisites and Assumptions:
 
 ![image](https://github.com/Ankana9910/miniprojectltts/blob/f838eddc23ae5f24af8eecdad59469d5c64bd299/2_Design/Untitled%20Workspace.jpg)
 
-# 4W'S AND 1'H
-**WHAT**
+## 4W'S AND 1'H
 
-**WHEN**
+ ### **WHO**
+***
+The Mathematicians, Engineers and Scientists who revolve around works related to metrics and conversions.
 
-**WHERE**
+### **WHAT**
+****
+The Calculator-Converter does more than just arithmetic calculations therefore becomes an aid to lots of calculation related problems, being accurate and easy to use.
 
-**WHY**
+### **WHEN**
+***
+The problem comes up when a calculator is felt short of functions that would satisfy one's need of calculations.
 
-**HOW**
+### **WHERE**
+***
+In the Science and Technology, Engineering Service Industry this is of a great use.
 
+### **HOW**
+Fast and Accurate result provision, which in turn saves time and energy of an individual.
 
 # DETAIL REQUIREMENTS
 
 
-
 ## HIGH LEVEL REQUIREMENTS
+***
+|S.No| Details | Category | Status|
+|------|-----|-----|-----|
+|1.| Choosing one function from the given options| Technical|Implemented|
+|2.| Choosing the type of operation required to be done | Technical|Implemented|
+|3.| Facility of Arithmetic Calculations and Metric, Electronic and Byte Conversions|Technical Implemented|
+
+
 
 ## LOW LEVEL REQUIREMENTS
 
-
+|S.No| Details | Status| 
+|----|----|---|
+|1.| A menu will be displayed to enter what has to be used-Calculator or Converter| Implemented|
+|2.| After entering this, For Calculator, a menu driven output will be displayed with 4-5 choices, User has to choose one of them| Implemented|
+|3.| User has to enter 2 inputs and then the required choice would generate the required output|Implemented|
+|4.| For Converter, a menu driven output would be displayed with 4-5 choices, out of which one needs to be selected|Implemented|
+|5.| There are Three options in here, 1. Metric Conversion 2. Electronic Conversions 3. Byte Conversions |Implemented|
+|6.| Program accepts one input and converts it to whatever is required by the user.
+|7.| In case of Wrong Input, the programs ends |Implemented|
 
 
 
