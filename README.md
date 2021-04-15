@@ -4,7 +4,7 @@
 
 Build | Code Quality | Unity | [Git Inspector]
 |-----|-----|-----|---  |
-||![CI](https://github.com/Ankana9910/miniprojectltts/actions/workflows/main.yml/badge.svg)![cppcheck-action-test](https://github.com/Ankana9910/miniprojectltts/actions/workflows/cppcheck.yml/badge.svg)![Codacy Badge](https://app.codacy.com/project/badge/Grade/3a5ecc5346da46d39ea818a2a21126b6)
+|[![C/C++ CI - Build Status](https://github.com/Ankana9910/miniprojectltts/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/Ankana9910/miniprojectltts/actions/workflows/c-cpp.yml)|![CI](https://github.com/Ankana9910/miniprojectltts/actions/workflows/main.yml/badge.svg)![cppcheck-action-test](https://github.com/Ankana9910/miniprojectltts/actions/workflows/cppcheck.yml/badge.svg)![Codacy Badge](https://app.codacy.com/project/badge/Grade/3a5ecc5346da46d39ea818a2a21126b6)|[![Unit Testing - Unity](https://github.com/Ankana9910/miniprojectltts/actions/workflows/unity.yml/badge.svg)](https://github.com/Ankana9910/miniprojectltts/actions/workflows/unity.yml)|
 
 ##  Folder Structure
 | FOLDER | DESCRIPTION |
