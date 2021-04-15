@@ -27,12 +27,9 @@ Build | Code Quality | Unity | [Git Inspector]
 |A4| For Conversions, respective inputs are provided and Conversions are carried out.
 |A5| Multiple Forms of conversions are made available
 
-## Challenges Faced and How it were overcome
-1. Unity Testing was an entirely new concept so effort was put to learn it first and then implement it.
-****
- 2. Making an application of Calculator-Converter using structures and functions was a new thing; earlier it was done by using just if-else or switch cases.
- *****
-3.  In the requirements section, the information about the first release of calculator and comparing the pros and cons with what it is now in this application was a tedious job.
-****
-4.  Making yml files and creating workflows was a new concept I learnt.
-```
+|S.no| Challenge|
+|-----|---|
+|1.| Unity Testing was an entirely new concept so effort was put to learn it first and then implement it.|
+| 2.| Making an application of Calculator-Converter using structures and functions was a new thing; earlier it was done by using just if-else or switch cases.|
+|3.|  In the requirements section, the information about the first release of calculator and comparing the pros and cons with what it is now in this application was a tedious job.|
+|4. | Making yml files and creating workflows was a new concept I learnt.
