@@ -1,2 +1,10 @@
-- name: Code Inspector GitHub action
-  uses: codeinspectorio/github-action@v1
+on: [push]
+
+jobs:
+  check-quality:
+    runs-on: windows-latest
+    name: A job to check my code quality
+    steps:
+    - name: Check code meets quality standards
+      id: code-inspector
+      uses: codeinspectorio/github-action@master
