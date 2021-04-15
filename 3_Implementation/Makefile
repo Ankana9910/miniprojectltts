@@ -6,7 +6,7 @@
 CC = gcc
 CXXFLAGS = -std=c11 -Wall
 LDFLAGS = 
-
+BUILD= build
 # Makefile settings - Can be customized.
 APPNAME = CALCONV
 EXT = .c
