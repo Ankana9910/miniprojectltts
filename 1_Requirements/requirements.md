@@ -97,7 +97,7 @@ Fast and Accurate result provision, which in turn saves time and energy of an in
 |------|-----|-----|-----|
 |1.| Choosing one function from the given options| Technical|Implemented|
 |2.| Choosing the type of operation required to be done | Technical|Implemented|
-|3.| Facility of Arithmetic Calculations and Metric, Electronic and Byte Conversions|Technical Implemented|
+|3.| Facility of Arithmetic Calculations and Metric, Electronic and Byte Conversions|Technical| Implemented|
 
 
 
@@ -110,7 +110,7 @@ Fast and Accurate result provision, which in turn saves time and energy of an in
 |3.| User has to enter 2 inputs and then the required choice would generate the required output|Implemented|
 |4.| For Converter, a menu driven output would be displayed with 4-5 choices, out of which one needs to be selected|Implemented|
 |5.| There are Three options in here, 1. Metric Conversion 2. Electronic Conversions 3. Byte Conversions |Implemented|
-|6.| Program accepts one input and converts it to whatever is required by the user.
+|6.| Program accepts one input and converts it to whatever is required by the user.|Implemented|
 |7.| In case of Wrong Input, the programs ends |Implemented|
 
 
