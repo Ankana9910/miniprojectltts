@@ -50,6 +50,8 @@ Prerequisites and Assumptions:
 1. For calculation part(arithmetic) only two inputs are being considered
 2. One sided conversion process is being shown here.
 
+![](https://github.com/Ankana9910/miniprojectltts/blob/30d011596e5aa5aa67d2999e02d59ad7034c9201/2_Design/diag1.png)
+
 
 
 # EXPLANATION:
