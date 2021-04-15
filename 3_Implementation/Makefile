@@ -1,29 +1,6 @@
-########################################################################
-####################### Makefile Template ##############################
-########################################################################
+PROJECT_NAME = calculator
 
-# Compiler settings - Can be customized.
-CC = gcc
-CXXFLAGS = -std=c11 -Wall
-LDFLAGS = 
-BUILD= build
-# Makefile settings - Can be customized.
-APPNAME = CALCONV
-EXT = .c
-SRCDIR = .
-OBJDIR = .
-
-############## Do not change anything from here downwards! #############
-SRC = $(wildcard $(SRCDIR)/*$(EXT))
-OBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)/%.o)
-DEP = $(OBJ:$(OBJDIR)/%.o=%.d)
-# UNIX-based OS variables & settings
-RM = rm
-DELOBJ = $(OBJ)
-# Windows OS variables & settings
-DEL = del
-EXE = .exe
-WDELOBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)\\%.o)
+BUILD = build
 
 ifdef OS
    RM = del /q
@@ -37,45 +14,54 @@ else
    endif
 endif
 
-########################################################################
-####################### Targets beginning here #########################
-########################################################################
 
-all: $(CALCONV)
+SRC = main.c\
+src/CALCONV1.c
 
-# Builds the app
-$(CALCONV): $(OBJ)
-	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+COV_SRC = test.c
 
-# Creates the dependecy rules
-%.d: $(SRCDIR)/%$(EXT)
-	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
+TEST_SRC = src/CALCONV1.c\
+test/test.c\
+unity/unity.c\
 
-# Includes all .h files
--include $(DEP)
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
-# Building rule for .o files and its .c/.cpp in combination with all .h
-$(OBJDIR)/%.o: $(SRCDIR)/%$(EXT)
-	$(CC) $(CXXFLAGS) -o $@ -c $<
+INC	= -Iinc\
+-Iunity\
 
-################### Cleaning rules for Unix-based OS ###################
-# Cleans complete project
-.PHONY: clean
+INCLUDE_LIBS = -lcunit
+
+PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+
+DOCUMENTATION_OUTPUT = documentation/html
+
+$(PROJECT_NAME):all
+
+.PHONY: run clean test doc all
+
+all: $(SRC) $(BUILD)
+	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT) -lm
+	
+run:$(PROJECT_NAME)
+	./$(PROJECT_OUTPUT)
+
+
+cppcheck:
+	cppcheck --enable=all $(SRC) main.c
+
+valgrind:
+	valgrind ./$(PROJECT_OUTPUT)
+		
+doc:
+	make -C ./documentation
+	
+test:$(BUILD)
+	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lm
+	./$(TEST_OUTPUT)
+
+
 clean:
-	$(RM) $(DELOBJ) $(DEP) $(CALCONV)
-
-# Cleans only all files with the extension .d
-.PHONY: cleandep
-cleandep:
-	$(RM) $(DEP)
-
-#################### Cleaning rules for Windows OS #####################
-# Cleans complete project
-.PHONY: cleanw
-cleanw:
-	$(DEL) $(WDELOBJ) $(DEP) $(CALCONV)$(EXE)
-
-# Cleans only all files with the extension .d
-.PHONY: cleandepw
-cleandepw:
-	$(DEL) $(DEP)
+	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
+	
+$(BUILD):
+	mkdir build
