@@ -20,9 +20,9 @@ SRC = src/calconv.c
 
 COV_SRC = test.c
 
-TEST_SRC = src/calconv.c.c\
-test/test.c\
-unity/unity.c\
+TEST_SRC = src/calconv.c \
+test/test.c \
+unity/unity.c \
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
@@ -41,14 +41,13 @@ $(PROJECT_NAME):all
 
 all: $(SRC) $(BUILD)
 	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT) -lm
-	
+
 run:$(PROJECT_NAME)
 	./$(PROJECT_OUTPUT)
 
 
 cppcheck:
-	cppcheck --enable=all $(SRC) main.c
-
+	cppcheck --enable=all $(SRC)
 valgrind:
 	valgrind ./$(PROJECT_OUTPUT)
 		
