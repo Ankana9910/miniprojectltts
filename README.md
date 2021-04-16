@@ -9,9 +9,10 @@ Build | Code Quality | Unity | [Git Inspector]
 ##  Folder Structure
 | FOLDER | DESCRIPTION |
 | --------  | -------- |
-| REQUIREMENTS   | FILES DISPLAYING THE RESEARCH AND REQUIREMENTS |
-| DESIGN    | THE DESIGN STRUCTURE REQUIRED|
-| IMPLEMENTATION     | THE SOURCE CODE OF THE PROJECT |
+| 1_Requirements   | FILES DISPLAYING THE RESEARCH AND REQUIREMENTS |
+|2_Design    | THE DESIGN STRUCTURE REQUIRED|
+| 3_Implementation     | THE SOURCE CODE OF THE PROJECT |
+|4_TestPlan| The HL and LL test plan|
 
 ## Contributors List and Summary
 
