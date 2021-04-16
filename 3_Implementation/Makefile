@@ -16,61 +16,75 @@ else
 endif
 
 
-SRC = src/calconv.c
+########################################################################
+####################### Makefile Template ##############################
+########################################################################
 
-COV_SRC = test.c
+# Compiler settings - Can be customized.
+CC = gcc
+CXXFLAGS = -std=c11 -Wall
+LDFLAGS = 
 
-TEST_SRC = src/calconv.c.c\
-test/test.c\
-unity/unity.c\
+# Makefile settings - Can be customized.
+APPNAME = CALCONV
+EXT = .c
+SRCDIR = .
+OBJDIR = .
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+############## Do not change anything from here downwards! #############
+SRC = $(wildcard $(SRCDIR)/*$(EXT))
+OBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)/%.o)
+DEP = $(OBJ:$(OBJDIR)/%.o=%.d)
+# UNIX-based OS variables & settings
+RM = rm
+DELOBJ = $(OBJ)
+# Windows OS variables & settings
+DEL = del
+EXE = .exe
+WDELOBJ = $(SRC:$(SRCDIR)/%$(EXT)=$(OBJDIR)\\%.o)
 
-INC	= -Iinc\
--Iunity\
+########################################################################
+####################### Targets beginning here #########################
+########################################################################
 
-INCLUDE_LIBS = -lcunit
+all: $(CALCONV)
 
-PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
+# Builds the app
+$(CALCONV): $(OBJ)
+	$(CC) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
-DOCUMENTATION_OUTPUT = documentation/html
+# Creates the dependecy rules
+%.d: $(SRCDIR)/%$(EXT)
+	@$(CPP) $(CFLAGS) $< -MM -MT $(@:%.d=$(OBJDIR)/%.o) >$@
 
-$(PROJECT_NAME):all
+# Includes all .h files
+-include $(DEP)
 
-.PHONY: run clean test doc all
+# Building rule for .o files and its .c/.cpp in combination with all .h
+$(OBJDIR)/%.o: $(SRCDIR)/%$(EXT)
+	$(CC) $(CXXFLAGS) -o $@ -c $<
 
-all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT) -lm
-	
-run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT)
-
-
-cppcheck:
-	cppcheck --enable=all $(SRC) main.c
-
-valgrind:
-	valgrind ./$(PROJECT_OUTPUT)
-		
-doc:
-	make -C ./documentation
-	
-test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lm
-	./$(TEST_OUTPUT)
-
-
+################### Cleaning rules for Unix-based OS ###################
+# Cleans complete project
+.PHONY: clean
 clean:
-	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT)
-	
-$(BUILD):
-	mkdir build
+	$(RM) $(DELOBJ) $(DEP) $(CALCONV)
 
+# Cleans only all files with the extension .d
+.PHONY: cleandep
+cleandep:
+	$(RM) $(DEP)
 
+#################### Cleaning rules for Windows OS #####################
+# Cleans complete project
+.PHONY: cleanw
+cleanw:
+	$(DEL) $(WDELOBJ) $(DEP) $(CALCONV)$(EXE)
 
-
-
-
+# Cleans only all files with the extension .d
+.PHONY: cleandepw
+cleandepw:
+	$(DEL) $(DEP)
 
 
 
