@@ -1,12 +1,8 @@
-
-
-
 ## INTRODUCTION
 ****
 There's this simple calculator which we all have in our mobile phones or the one we get in the stationery shops.
 Since years it has been doing the same job of arithmetically operating upon numbers and giving out the sum, product etc. But for us engineers; instead of taking a pen-paper to convert bits to bytes, centimeters to feets or calculating voltage or power through devices. 
 To simplify this **CALCONV** has been introduced. 
-
 
 **CALCONV** is a Calculator-Converter, which can be used to: 
 1. Implement basic Arithmetic Operations
@@ -35,13 +31,9 @@ But the place where we get stuck is the conversion part. All sorts of conversion
 3. The first solid-state electronic calculator came out in the 1960s ; this is what we use today with certain advancements.
                 ![](https://github.com/Ankana9910/miniprojectltts/blob/274aa1c76f621e3c0602b0939c8cb33f8b01dde3/2_Design/calculator.jpg)
 
-
 **CURRENT SCENARIO**
 ****
 Nowadays there are two sorts of calculators that we use, one is the normal calculator and other is the scientific calculator. 
-
-
- 
 > None of the Calcuators provides such conversion options.
 > Here in this calculator the basic is to acecpt user input to get to know what is actually going ot be done.
 
@@ -53,16 +45,12 @@ Prerequisites and Assumptions:
 
 ![](https://github.com/Ankana9910/miniprojectltts/blob/30d011596e5aa5aa67d2999e02d59ad7034c9201/2_Design/diag1.png)
 
-
-
 # EXPLANATION:
 
 1. First we take an input from the user that what actually he wants to perform; Calculation or Digital Bit Conversion
 2.Then The number is entered which is required to be checked.
 3.From the dropdown menu, the choice of type of conversion/calculation is taken up
 4.Result is displayed
-
-
 
 # SWOT ANALYSIS
 
@@ -93,14 +81,14 @@ Fast and Accurate result provision, which in turn saves time and energy of an in
 
 
 ## HIGH LEVEL REQUIREMENTS
-***
+
 |S.No| Details | Category | Status|
 |------|-----|-----|-----|
 |1.| Choosing one function from the given options| Technical|Implemented|
 |2.| Choosing the type of operation required to be done | Technical|Implemented|
 |3.| Facility of Arithmetic Calculations and Metric, Electronic and Byte Conversions|Technical| Implemented|
 
-
+***
 
 ## LOW LEVEL REQUIREMENTS
 
