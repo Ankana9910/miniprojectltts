@@ -4,6 +4,12 @@
 3_Implementation/src/CALCONV1.c:20:11: style: struct member 'converter::bytes' is never used. [unusedStructMember]
  long int bytes;
           ^
+3_Implementation/src/calconv.c:132:7: warning: %d in format string (no. 1) requires 'int *' but the argument type is 'signed char *'. [invalidScanfArgType_int]
+      scanf("%d",&v.a);
+      ^
+3_Implementation/src/calconv.c:20:11: style: struct member 'converter::bytes' is never used. [unusedStructMember]
+ long int bytes;
+          ^
 3_Implementation/unity/unity.c:0:0: information: Too many #ifdef configurations - cppcheck only checks 12 of 42 configurations. Use --force to check all configurations. [toomanyconfigs]
 
 ^
