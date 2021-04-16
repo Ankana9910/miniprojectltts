@@ -1,7 +1,7 @@
 #include "unity.h"
 #include<testcal.h>
 
-#define PROJECT_NAME "CALCONV"
+#define PROJECT_NAME "calconv.c"
 
 void test_cal(void);
 void test_conv(void);
